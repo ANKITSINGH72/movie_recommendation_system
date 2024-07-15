@@ -1,5 +1,5 @@
 
-# [Movie Recommendation System](app_interface.png)
+# [Movie Recommendation System](https://movierecommendationsystem-xe6tddaqlerxgfcnxruzyj.streamlit.app/)
 
 ## About Project
 
@@ -17,5 +17,5 @@
 
 ## App View
 
-![App view](app_interface.png)
+![](app_interface.png)
 
