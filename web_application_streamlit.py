@@ -3,11 +3,12 @@ import pickle
 import pandas as pd
 import requests
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
+    url = "https://api.themoviedb.org/3/movie/{}?api_key=a081a8c60104ad3134c23ad934e1e9f8&language=en-US".format(movie_id)
     data = requests.get(url)
     data = data.json()
     poster_path = data['poster_path']
     full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
+   
     return full_path
 def recommend(movie):
     movie_index=movies[movies['title']==movie].index[0]
@@ -23,7 +24,7 @@ def recommend(movie):
     return recommended_movies, recommended_movies_poster
 movies_dict=pickle.load(open('movie_dict.pkl','rb'))
 movies=pd.DataFrame(movies_dict)
-similarity=pickle.load(open('C:/Users/HP/movie recommender system/similarity.pkl','rb'))
+similarity=pickle.load(open('similarity.pkl','rb'))
 st.title("AI Based Movie Recommender System")
 selected_movie_name=st.selectbox(
     'Select Movie From The Given List',
