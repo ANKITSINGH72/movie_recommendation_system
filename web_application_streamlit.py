@@ -8,7 +8,7 @@ def fetch_poster(movie_id):
     data = data.json()
     poster_path = data['poster_path']
     full_path = "https://image.tmdb.org/t/p/w500/" + poster_path
-   
+   # full_path='avtar.jpg'
     return full_path
 def recommend(movie):
     movie_index=movies[movies['title']==movie].index[0]
@@ -22,7 +22,7 @@ def recommend(movie):
        #fetching poster from API
        recommended_movies_poster.append(fetch_poster(movie_id))
     return recommended_movies, recommended_movies_poster
-movies_dict=pickle.load(open('movie_dict.pkl','rb'))
+movies_dict=pickle.load(open('movies.pkl','rb'))
 movies=pd.DataFrame(movies_dict)
 similarity=pickle.load(open('similarity.pkl','rb'))
 st.title("AI Based Movie Recommender System")
