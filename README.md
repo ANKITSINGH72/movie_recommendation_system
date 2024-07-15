@@ -17,5 +17,5 @@
 
 ## App View
 
-![[](app_interface.png)](https://movierecommendationsystem-xe6tddaqlerxgfcnxruzyj.streamlit.app/)
+![(https://movierecommendationsystem-xe6tddaqlerxgfcnxruzyj.streamlit.app/)](app_interface.png)(https://movierecommendationsystem-xe6tddaqlerxgfcnxruzyj.streamlit.app/)
 
